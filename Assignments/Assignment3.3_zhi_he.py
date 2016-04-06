@@ -8,7 +8,7 @@ while True:
         break
 
 if score > 1.0:
-	print "this isn't between 0.0 and 1.0"
+   print "this isn't between 0.0 and 1.0"
 elif score >= .9:
    print "A"
 elif score >= .8:
