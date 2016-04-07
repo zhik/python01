@@ -16,7 +16,7 @@ while True:
         continue
     else:
         if hours > 40:
-           salary = hours * rate + ((hours - 40) * (rate * .5))
+           salary = 40 * rate + ((hours - 40) * (rate * 1.5))
         elif hours <= 40:    
            salary = hours * rate
         print "Your salary is $", salary
