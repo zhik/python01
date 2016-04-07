@@ -14,13 +14,3 @@ while True:
 salary = hours * rate
 print "Your salary is $", salary
 
-#a = raw_input("hour rate ")
-#b = raw_input("hours worked:")
-
-#if ((type(a) == int or float)) and (type(b) == (int or float)):
-#	p = a * b
-#	print ("your salary is" , p)
-#else: 
-#	print("your input isn't a number")
-
-
