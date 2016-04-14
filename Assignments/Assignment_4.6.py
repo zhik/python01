@@ -8,10 +8,28 @@ Do not worry about error checking the user input unless you want to - you can as
 Do not name your variable sum or use the sum() function.
 
 """
-def computepay(h,r):
-    return 42.37
 
-hrs = raw_input("Enter Hours:")
-p = computepay(10,20)
-print "Pay",p
+
+def computepay(hours,rate):
+	while True:
+		try:
+			hours = float(hours)
+			rate = float(rate)
+		except:
+			print("You didn't enter a number")
+			break
+		else:
+			if hours > 40:
+				salary = 40 * rate + ((hours - 40) * (rate * 1.5))
+			elif hours <= 40:    
+				salary = hours * rate
+			return "Your salary is $", salary
+		break
+
+h = raw_input("Amount of hours worked: ")
+r = raw_input("Rate for each hour: ")
+
+print computepay(h, r)
+print computepay(40, 10)
+
 
