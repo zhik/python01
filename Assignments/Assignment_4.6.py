@@ -11,19 +11,17 @@ Do not name your variable sum or use the sum() function.
 
 
 def computepay(hours,rate):
-	while True:
-		try:
-			hours = float(hours)
-			rate = float(rate)
-		except:
-			return ("You didn't enter a number")
-			break
-		if hours > 40:
-			salary = 40 * rate + ((hours - 40) * (rate * 1.5))
-		elif hours <= 40:    
-			salary = hours * rate
-		return "Your salary is $", salary
-		break
+	try:
+		hours = float(hours)
+		rate = float(rate)
+	except:
+		return ("You didn't enter a number")
+	if hours > 40:
+		salary = 40 * rate + ((hours - 40) * (rate * 1.5))
+	elif hours <= 40:    
+		salary = hours * rate
+	return "Your salary is $", salary
+
 
 h = raw_input("Amount of hours worked: ")
 r = raw_input("Rate for each hour: ")
