@@ -13,6 +13,7 @@ while True:
 		else:
 			print("there are no numbers in the list")
 			continue
+			
 	#check if the input is a float/num
 	try:
 		num = float(num)
