@@ -6,11 +6,13 @@
 # Use words.txt as the file name
 fname = raw_input("Enter file name: ")
 
+#open file
 try:
 	fh = open(fname)
 except:
 	print "no file with that name"
 
+#clean line and uppercase
 for line in fh:
 	print line.upper().rstrip()
 

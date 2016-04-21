@@ -10,11 +10,13 @@
 fname = raw_input("Enter file name: ")
 n_list = []
 
+#open file
 try:
 	fh = open(fname)
 except:
 	print "this isn't a file"
 
+#clean each line of the file and find the float number
 for line in fh:
 	line = line.lstrip().rstrip()
 	if line.startswith("X-DSPAM-Confidence:"):
@@ -22,6 +24,7 @@ for line in fh:
 		number = float(line[decimal:])
 		n_list.append(number)
 
+#count and add numbers so average can be found
 n_sum = 0
 count = 0
 for number in n_list:
