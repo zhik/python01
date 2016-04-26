@@ -8,7 +8,6 @@
 # Hint: make sure not to include the lines that start with 'From:'.
 
 #fname = raw_input("Enter file name: ")
-
 # if len(fname) < 1: 
 # 	fname = "mbox-short.txt"
 fh = open("mbox-short.txt")

@@ -9,7 +9,8 @@
 # if " " in line:
 fname = raw_input("Enter file name: ")
 n_list = []
-
+n_sum = 0
+count = 0
 #open file
 try:
 	fh = open(fname)
@@ -23,13 +24,15 @@ for line in fh:
 		decimal = line.find(".")
 		number = float(line[decimal:])
 		n_list.append(number)
+		count = count + 1
+		n_sum = n_sum + number
 
 #count and add numbers so average can be found
-n_sum = 0
-count = 0
-for number in n_list:
-	n_sum = n_sum + number
-	count += 1
+#n_sum = 0
+#count = 0
+#for number in n_list:
+#	n_sum = n_sum + number
+#	count += 1
 average = n_sum / count
 print "this is the average", average
 
