@@ -8,7 +8,7 @@
 
 # if " " in line:
 fname = raw_input("Enter file name: ")
-n_list = []
+#n_list = []
 n_sum = 0
 count = 0
 #open file
@@ -23,7 +23,7 @@ for line in fh:
 	if line.startswith("X-DSPAM-Confidence:"):
 		decimal = line.find(".")
 		number = float(line[decimal:])
-		n_list.append(number)
+		#n_list.append(number)
 		count = count + 1
 		n_sum = n_sum + number
 
