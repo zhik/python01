@@ -15,7 +15,7 @@ count = 0
 # e_list = []
 
 for line in fh:
-	line = line.rstrip().lstrip()
+	line = line.strip()
 	if line.startswith("From"):
 		# this will find all the emails(take out the repeats)
 		# word_lst = line.rstrip().split()
