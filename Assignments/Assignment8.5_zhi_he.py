@@ -12,15 +12,16 @@
 # 	fname = "mbox-short.txt"
 fh = open("mbox-short.txt")
 count = 0
-# e_list = []
+e_list = []
 
 for line in fh:
 	line = line.strip()
 	if line.startswith("From"):
 		# this will find all the emails(take out the repeats)
-		# word_lst = line.rstrip().split()
-		# if word_lst[1] not in e_list:
-		# 	e_list.append(word_lst[1])
+		word_lst = line.rstrip().split()
+		if word_lst[1] not in e_list:
+			e_list.append(word_lst[1])
+			print word_lst[1]
 		count += 1
 
 print "There were", count, "lines in the file with From as the first word"
