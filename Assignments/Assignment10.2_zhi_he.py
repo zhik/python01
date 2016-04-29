@@ -21,7 +21,10 @@ for line in handle:
 		#add to dict, and count the amount of instances 
 		dictofhours[hour] = dictofhours.get(hour, 0) + 1
 
-#print out count @ what hours, 12 hour format because why not
+# #this is if you want to sort by the highest counts
+# print sorted([(value, key) for key, value in dictofhours.items()],reverse=True)
+
+#this is for if you want to sort by hours(12 hour format)
 for key,value in sorted(dictofhours.items()):
 	#if it's over 12 hours then -12 and add pm
 	if int(key) > 12:
